@@ -19,7 +19,9 @@ const cors = require("cors");
 app.use(cors({ origin: true }));
 
 mongoose
-  .connect("mongodb://127.0.0.1/CourseData")
+  .connect(
+    "mongodb+srv://ravisenjaliya008:raviraviravi@cluster0.dtnkpre.mongodb.net/academiadata"
+  )
   .then(() => console.log("database connection successfuly"))
   .catch((err) => console.error("connection faild", err));
 
