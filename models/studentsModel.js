@@ -21,7 +21,7 @@ const studentSchema = new mongoose.Schema({
   adhar: { type: String, require: true },
   sphoto: { type: String, require: true },
 });
-
+// hello
 const studentModel = mongoose.model("student", studentSchema);
 
 exports.studentModel = studentModel;
