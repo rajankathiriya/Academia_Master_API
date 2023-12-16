@@ -6,6 +6,7 @@ const studentquerySchema = new mongoose.Schema({
   email: { type: String, required: true },
   Phone: { type: Number, required: true, maxlength: 10 },
   query: { type: String, required: true },
+  subject: { type: String },
   timestampField: { type: Date, default: Date.now }, // Adding a timestamp field
 });
 

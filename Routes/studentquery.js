@@ -23,6 +23,7 @@ route.post("/", async (req, res) => {
     email: req.body.email,
     Phone: req.body.Phone,
     query: req.body.query,
+    subject: req.body.subject,
   });
   await StudentQuery.save();
   res.send(StudentQuery);
@@ -36,6 +37,7 @@ route.put("/:id", async (req, res) => {
       email: req.body.email,
       Phone: req.body.Phone,
       query: req.body.query,
+      subject: req.body.subject,
     },
     { new: true }
   );

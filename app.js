@@ -1,3 +1,5 @@
+// hosted api
+
 const express = require("express");
 
 const studentquery = require("./Routes/studentquery");
