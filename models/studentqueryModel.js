@@ -2,10 +2,10 @@ const mongoose = require("mongoose");
 
 //mongoose ni Schema banavi
 const studentquerySchema = new mongoose.Schema({
-  studentname: { type: String, required: true },
-  email: { type: String, required: true },
-  Phone: { type: Number, required: true, maxlength: 10 },
-  query: { type: String, required: true },
+  studentname: { type: String },
+  email: { type: String },
+  Phone: { type: Number },
+  query: { type: String },
   subject: { type: String },
   timestampField: { type: Date, default: Date.now }, // Adding a timestamp field
 });

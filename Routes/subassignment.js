@@ -8,7 +8,7 @@ const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(
       null,
-      "C:/Users/BAPS/Desktop/Student Panel/student panel/src/pages/img/asspdf"
+      "C:/Users/BAPS/Desktop/academia/student panel/src/pages/img/asspdf"
     );
   },
   filename: function (req, file, cb) {

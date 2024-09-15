@@ -1,6 +1,6 @@
-// hosted api
-
 const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
 
 const studentquery = require("./Routes/studentquery");
 const Studentenquiry = require("./Routes/studentenquiry");
@@ -14,22 +14,19 @@ const subnotice = require("./Routes/subnotice");
 const subdrive = require("./Routes/subdrive");
 const subassignment = require("./Routes/subassignment");
 
-const mongoose = require("mongoose");
 const app = express();
-const cors = require("cors");
 
-app.use(cors({ origin: true }));
+app.use(cors());
 
 mongoose
-  .connect(
-    "mongodb+srv://ravisenjaliya008:raviraviravi@cluster0.dtnkpre.mongodb.net/academiadata"
-  )
-  .then(() => console.log("database connection successfuly"))
-  .catch((err) => console.error("connection faild", err));
+  .connect("mongodb+srv://rkofficial2512:rkofficial2512@cluster0.34yo9.mongodb.net/academiadata")
+  .then(() => console.log("Database connection successful"))
+  .catch((err) => console.error("Connection failed", err));
 
 app.use(express.json());
 
-app.use("/api/studentquery", studentquery);
+// Define your API routes
+app.use("/api/studentquery/", studentquery);
 app.use("/api/studentenquiry", Studentenquiry);
 app.use("/api/students", student);
 app.use("/api/fees", fees);
@@ -41,5 +38,6 @@ app.use("/api/subnotice", subnotice);
 app.use("/api/subdrive", subdrive);
 app.use("/api/subassignment", subassignment);
 
-const port = process.env.PORT || 8080;
-app.listen(port, () => console.log(`app runing on port ${port}`));
+const port = 8080;
+
+app.listen(port, () => console.log(`App running on port ${port}`));
